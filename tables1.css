@@ -1,0 +1,20 @@
+body{background-color: blue;}
+table{
+    
+   border: 1000mm; background-color: rgb(33, 170, 21);
+   width: 500;
+   height: 500;
+}
+th{
+    border: chartreuse;
+    text-align: left;
+}
+td{
+    text-align: right;
+    padding: 2pc;
+    border-radius: 2pc;
+}
+tr:nth-child(even){
+    background-color: rgb(9, 241, 9);
+}
+   
