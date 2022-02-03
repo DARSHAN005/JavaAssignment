@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head><title>
+        Array methods
+    </title></head>
+    <body>
+        <h2 id="box"> </h2>
+        <p id="box1"></p>
+        <p id="box2"></p><br>
+        <h1>Map method</h1>
+        <p id="box3"></p><br>
+        <h1>Filter method</h1>
+        <p id="box4"></p><br>
+        <h1>reduce method</h1>
+        <p id="box5"></p>
+        <script>
+           let fruits=['Apple','Orange','Mango'] 
+           document.getElementById("box").innerHTML=fruits.splice(2,0,"watermelon","muskmelon")
+           document.getElementById("box").innerHTML="After applying splice method " +fruits;
+
+           let veg=['potato','tomotp','onion'];
+           let basket=fruits.concat(veg);
+           document.getElementById("box1").innerHTML="After applying concat method " + basket;
+           //slice
+           document.getElementById("box2").innerHTML="After applying slice method " +fruits.slice(1,5);
+           let num1=[37,20,16,45]
+           let num2=num1.map(muFunction);
+           document.getElementById("box3").innerHTML="After applying map method " + num2;
+           function muFunction(value){
+               return value*10;
+           }
+           
+
+        </script>
+        <script>
+             let num11=[37,20,16,45,34,45];
+           let abovenum21=num11.filter(myFunction);
+           document.getElementById("box4").innerHTML="After applying filter method " + abovenum21;
+           function myFunction(value,index,array){
+               return value>21;
+           }
+        </script>
+         <script>
+            let num111=[37,20,16,45,34,45];
+          let sum=num111.reduce(myFunction,1000);
+          document.getElementById("box5").innerHTML="After applying reduce method " + sum;
+          function myFunction(value,total){
+              return total+value;
+          }
+       </script>
+       
+    </body>
+</html>
